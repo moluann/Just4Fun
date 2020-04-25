@@ -1,2 +1,2 @@
-include ':app'
+include ':app', ':videoplayer'
 rootProject.name='Just4Fun'

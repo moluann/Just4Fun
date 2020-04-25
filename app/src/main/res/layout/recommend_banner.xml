@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="20dp">
+
+    <com.youth.banner.Banner
+        android:id="@+id/banner_view"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:is_auto_loop="true"
+        >
+<!--        <ImageView-->
+<!--            android:id="@+id/banner_img"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:scaleType="centerCrop"-->
+<!--            android:src="@drawable/ic_launcher_background"-->
+<!--            />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/banner_title"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="start|bottom"-->
+<!--            android:textAppearance="@style/TextAppearance.AppCompat.Title"-->
+<!--            android:textColor="@android:color/white"-->
+<!--            android:padding="10dp"-->
+<!--            android:text="sdfsdfsf"-->
+<!--            />-->
+
+
+
+    </com.youth.banner.Banner>
+
+
+
+</androidx.cardview.widget.CardView>
