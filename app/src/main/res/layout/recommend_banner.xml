@@ -1,17 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
 
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+
+<com.youth.banner.Banner
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardCornerRadius="20dp">
-
-    <com.youth.banner.Banner
-        android:id="@+id/banner_view"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        app:is_auto_loop="true"
-        >
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/banner_view"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    app:is_auto_loop="true"
+    >
 <!--        <ImageView-->
 <!--            android:id="@+id/banner_img"-->
 <!--            android:layout_width="match_parent"-->
@@ -36,5 +33,3 @@
     </com.youth.banner.Banner>
 
 
-
-</androidx.cardview.widget.CardView>

@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import com.google.android.material.navigation.NavigationView;
 import com.huaxiao47.just4fun.ui.home.HomeFragment;
+import com.huaxiao47.just4fun.ui.paly.PlayFragment;
 
 
 public class MainActivity extends AppCompatActivity implements TBarFragment.OnFragmentInteractionListener,NavigationView.OnNavigationItemSelectedListener {
@@ -21,7 +22,9 @@ public class MainActivity extends AppCompatActivity implements TBarFragment.OnFr
         setTheme(R.style.AppTheme_NoActionBar);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        getSupportFragmentManager().beginTransaction().replace(R.id.page_container, new HomeFragment()).commit();
+//        getSupportFragmentManager().beginTransaction().replace(R.id.page_container, new HomeFragment()).commit();
+        //// TODO: 2020/4/27 测试
+        getSupportFragmentManager().beginTransaction().replace(R.id.page_container, new PlayFragment()).commit();
         initNavView();
     }
 

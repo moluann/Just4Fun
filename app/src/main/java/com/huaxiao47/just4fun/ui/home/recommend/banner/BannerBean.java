@@ -17,12 +17,12 @@ public class BannerBean {
     private static List<BannerBean> banners;
 
     public static List<BannerBean> getTestData(){
-       if (banners != null){
+       if (banners == null){
            banners = new ArrayList<>();
-           banners.add(new BannerBean("https://i0.hdslb.com/bfs/sycp/creative_img/202004/fdf8c91955f9eec641b3759cebcaed37.jpg@880w_388h_1c_95q","lla","sdf"));
-           banners.add(new BannerBean("https://i0.hdslb.com/bfs/sycp/creative_img/202004/fdf8c91955f9eec641b3759cebcaed37.jpg@880w_388h_1c_95q","lla","sdf"));
-           banners.add(new BannerBean("https://i0.hdslb.com/bfs/sycp/creative_img/202004/fdf8c91955f9eec641b3759cebcaed37.jpg@880w_388h_1c_95q","lla","sdf"));
-           banners.add(new BannerBean("https://i0.hdslb.com/bfs/sycp/creative_img/202004/fdf8c91955f9eec641b3759cebcaed37.jpg@880w_388h_1c_95q","lla","sdf"));
+           banners.add(new BannerBean("https://i0.hdslb.com/bfs/archive/6c472210a2f0f3be44ba4428dd40037d1a0d70a2.jpg@412w_232h_1c_100q.jpg","lla","sdf"));
+           banners.add(new BannerBean("https://i0.hdslb.com/bfs/archive/6c472210a2f0f3be44ba4428dd40037d1a0d70a2.jpg@412w_232h_1c_100q.jpg","lla","sdf"));
+           banners.add(new BannerBean("https://i0.hdslb.com/bfs/archive/6c472210a2f0f3be44ba4428dd40037d1a0d70a2.jpg@412w_232h_1c_100q.jpg","lla","sdf"));
+           banners.add(new BannerBean("https://i0.hdslb.com/bfs/archive/6c472210a2f0f3be44ba4428dd40037d1a0d70a2.jpg@412w_232h_1c_100q.jpg","lla","sdf"));
 
        }
 

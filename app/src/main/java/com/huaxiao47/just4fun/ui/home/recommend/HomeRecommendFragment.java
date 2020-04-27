@@ -12,6 +12,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
@@ -55,7 +56,7 @@ public class HomeRecommendFragment extends Fragment {
 
         mRefreshLayout = root.findViewById(R.id.swipe_refresh);
         mRecyclerView = root.findViewById(R.id.recycler_view);
-
+        initRefreshLayout();
         initRecyclerView();
 
 
@@ -64,15 +65,43 @@ public class HomeRecommendFragment extends Fragment {
 
     }
 
+    private void initRefreshLayout() {
+        mRefreshLayout.setColorSchemeResources( R.color.materialBlue,
+                R.color.colorAccent,
+                R.color.colorPrimary);
+        mRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+
+            }
+        });
+    }
+
     private void initRecyclerView() {
 
         LinearLayoutManager manager = new LinearLayoutManager(mContext);
         manager.setOrientation(LinearLayoutManager.VERTICAL);
-        mRecyclerView.setLayoutManager(manager);
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(mContext,2);
+        gridLayoutManager.setSpanSizeLookup(new GridLayoutManager.SpanSizeLookup() {
+            @Override
+            public int getSpanSize(int position) {
+                if (position ==0)
+                    return 2;
+                return 1;
+            }
+        });
+        mRecyclerView.setLayoutManager(gridLayoutManager);
         mRecyclerView.addItemDecoration(new SpacesItemDecoration(10));
         adapter = new RecommendRecyclerViewAdapter();
         mRecyclerView.setAdapter(adapter);
+        mRecyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
+            @Override
+            public void onScrollStateChanged(@NonNull RecyclerView recyclerView, int newState) {
+                super.onScrollStateChanged(recyclerView, newState);
 
+
+            }
+        });
     }
 
     @Override
