@@ -12,11 +12,14 @@ public class App extends Application  {
         appContext = this;
         CrashHandler crashHandler = CrashHandler.getInstance();
         crashHandler.init(this);
+        setTheme(R.style.GirlishPink);
     }
 
     //get global context
     public static App getAppContext() {
         return appContext;
     }
+
+
 
 }

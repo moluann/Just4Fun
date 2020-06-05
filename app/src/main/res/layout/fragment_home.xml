@@ -18,7 +18,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 android:contentInsetStart="0dp"
-                android:background="@color/materialBlue"
                 app:contentInsetStart="0dp"
                 app:layout_scrollFlags="scroll|enterAlways"
                 app:popupTheme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
@@ -61,7 +60,7 @@
                 android:id="@+id/home_tabs"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:background="@color/materialBlue"
+
                 app:tabMode="scrollable"
                 app:tabTextColor="@color/colorPrimaryDark"
 

@@ -3,7 +3,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.paly.PlayFragment">
+
+    <com.huaxiao47.just4fun.widget.CircleProgressView
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_centerInParent="true"
+        app:matProg_barColor="?attr/colorPrimary"
+        app:matProg_barWidth="4dp"
+        app:matProg_progressIndeterminate="true"
+        />
 
     <com.huaxiao47.videoplayer.media.IjkVideoView
         android:id="@+id/video_view"
@@ -11,5 +21,21 @@
         android:layout_height="wrap_content"
 
         />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <Button
+            android:id="@+id/stop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="stop"
+            />
+
+
+
+
+    </RelativeLayout>
 
 </FrameLayout>

@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.huaxiao47.just4fun">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
 
     <!-- 往SDCard写入数据权限 -->
@@ -18,7 +19,6 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".FullscreenActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_fullscreen"
             android:theme="@style/FullscreenTheme"></activity>
         <activity
@@ -30,6 +30,8 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".MainActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+
             android:theme="@style/AppTheme.Launcher">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

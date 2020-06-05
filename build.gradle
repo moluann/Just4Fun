@@ -21,6 +21,7 @@ allprojects {
         
     }
 }
+def bazelLocation = 'D:\\GoPath\\bin\\bazel'
 
 task clean(type: Delete) {
     delete rootProject.buildDir

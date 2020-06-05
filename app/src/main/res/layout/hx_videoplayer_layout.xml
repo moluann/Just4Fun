@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:orientation="horizontal"
+            >
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:src="@drawable/svg_play_volume"
+
+            />
+
+         <SeekBar
+             android:layout_width="200dp"
+             android:layout_height="1dp"
+             android:layout_gravity="center"
+             android:thumb="@drawable/svg_play_volume"
+             />
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="1:00/1:00"
+             android:gravity="center"
+             android:layout_gravity="center"
+             />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/svg_play_volume"
+                android:padding="10dp"
+                android:layout_gravity="center"
+                />
+
+        </LinearLayout>
+
+        <master.flame.danmaku.ui.widget.DanmakuView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <com.huaxiao47.videoplayer.media.IjkVideoView
+            android:id="@+id/video_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+    </RelativeLayout>
+
+</FrameLayout>
