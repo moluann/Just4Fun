@@ -31,7 +31,8 @@ public class MainActivity extends AppCompatActivity implements TBarFragment.OnFr
         //// TODO: 2020/4/27 测试
 //        getSupportFragmentManager().beginTransaction().replace(R.id.page_container, new PlayFragment()).commit();
         initNavView();
-        Log.e(TAG, "onCreate: "+stringFromjni() );
+        Log.e(TAG, "onCreate: "+createTld() );
+
     }
 
     private void initNavView() {
@@ -39,7 +40,7 @@ public class MainActivity extends AppCompatActivity implements TBarFragment.OnFr
         NavigationView navView = findViewById(R.id.nav_view);
         //todo 修改nav
 
-
+        
     }
 
 
@@ -90,4 +91,5 @@ public class MainActivity extends AppCompatActivity implements TBarFragment.OnFr
         System.loadLibrary("native-lib");
     }
     public static native String stringFromjni();
+    public static native String createTld();
 }
