@@ -1129,7 +1129,7 @@ class CV_EXPORTS_W TrackerBoosting : public Tracker
   virtual ~TrackerBoosting() CV_OVERRIDE {}
 };
 
-/** @brief the Median Flow tracker
+/** @brief the Median Flow 的tracker
 
 Implementation of a paper @cite MedianFlow .
 

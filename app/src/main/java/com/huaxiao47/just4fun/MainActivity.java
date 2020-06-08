@@ -5,8 +5,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.Manifest;
 import android.media.MediaPlayer;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
@@ -14,7 +16,7 @@ import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
 import com.huaxiao47.just4fun.ui.home.HomeFragment;
-
+import com.huaxiao47.just4fun.ui.slideshow.ShootFragment;
 
 
 public class MainActivity extends AppCompatActivity implements TBarFragment.OnFragmentInteractionListener,NavigationView.OnNavigationItemSelectedListener {
@@ -38,6 +40,7 @@ public class MainActivity extends AppCompatActivity implements TBarFragment.OnFr
     private void initNavView() {
         drawer = findViewById(R.id.drawer_layout);
         NavigationView navView = findViewById(R.id.nav_view);
+        navView.setNavigationItemSelectedListener(this);
         //todo 修改nav
 
         
@@ -56,13 +59,19 @@ public class MainActivity extends AppCompatActivity implements TBarFragment.OnFr
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-        drawer.closeDrawer(GravityCompat.START);
+//        drawer.closeDrawer(GravityCompat.START);
         switch (menuItem.getItemId()){
             case R.id.nav_home:
                 Toast.makeText(this,"click home",Toast.LENGTH_LONG).show();
+
                 break;
             case R.id.nav_record:
                 Toast.makeText(this,"click record",Toast.LENGTH_LONG).show();
+
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                    requestPermissions(new String[]{Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE}, 200);
+                }
+                getSupportFragmentManager().beginTransaction().replace(R.id.page_container, new ShootFragment()).commit();
                 break;
             case R.id.nav_gallery:
                 break;

@@ -25,20 +25,32 @@ Java_com_huaxiao47_just4fun_MainActivity_stringFromjni(JNIEnv *env, jclass clazz
     return env->NewStringUTF(h.c_str());
 }
 
+cv::Ptr<cv::Tracker> tracker;
+cv::Mat mat
+
 
 extern "C"
 JNIEXPORT jstring JNICALL
 Java_com_huaxiao47_just4fun_MainActivity_createTld(JNIEnv *env, jclass clazz) {
     std::string h= cv::getVersionString();
 
+    cv::Rect2d boundBox();
 
-    cv::Ptr<cv::Tracker> tracker = cv::TrackerTLD::create();
 
 
+     tracker = cv::TrackerTLD::create();
+
+     tracker->init();
+
+      const cv::Mat a;
+
+//    tracker->init(a,&boundBox)
     return env->NewStringUTF("ok");
 
 
 }
+
+
 
 //extern "C"
 //JNIEXPORT jstring JNICALL
